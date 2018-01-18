@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/row_bg_selector"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/row_label_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/file_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/row_name"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/row_label_name"
+        app:layout_constraintTop_toTopOf="@id/row_label_name"
+        app:layout_constraintEnd_toStartOf="@id/row_thumb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/row_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        android:layout_width="96dp"
+        android:layout_height="96dp" />
+
+    <TextView
+        android:id="@+id/row_label_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:text="@string/duration"
+        app:layout_constraintStart_toStartOf="@+id/row_label_name"
+        app:layout_constraintTop_toBottomOf="@+id/row_name" />
+
+    <TextView
+        android:id="@+id/row_text_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="10:10"
+        app:layout_constraintStart_toEndOf="@+id/row_label_duration"
+        app:layout_constraintTop_toTopOf="@+id/row_label_duration" />
+
+    <TextView
+        android:id="@+id/row_label_added"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:text="@string/added"
+        app:layout_constraintStart_toStartOf="@+id/row_label_duration"
+        app:layout_constraintTop_toBottomOf="@+id/row_label_duration" />
+
+    <TextView
+        android:id="@+id/row_added"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/row_label_added"
+        app:layout_constraintTop_toTopOf="@+id/row_label_added" />
+</android.support.constraint.ConstraintLayout>

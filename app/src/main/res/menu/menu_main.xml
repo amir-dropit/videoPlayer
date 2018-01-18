@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.pantos27.videoplayer.MainActivity">
+    <item
+        android:id="@+id/action_saved"
+        android:orderInCategory="100"
+        android:title="@string/action_saved_playlists"
+        app:showAsAction="never" />
+</menu>

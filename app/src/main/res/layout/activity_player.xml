@@ -1,0 +1,85 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.pantos27.videoplayer.PlayerActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/player_view"
+        android:keepScreenOn="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:layout_marginBottom="57dp"
+            android:background="@color/black_overlay"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+            <Button
+                android:id="@+id/player_btn_exit"
+                android:layout_marginTop="48dp"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="36dp"
+                android:onClick="onExit"
+                android:layout_height="36dp"
+                android:background="@drawable/ic_arrow_back_black_24dp"
+                />
+            <Space
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <Button
+                android:id="@+id/player_btn_volume_up"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:onClick="onVolumeUpClick"
+                android:background="@drawable/ic_volume_up_black_24dp"
+                 />
+            <Button
+                android:layout_marginTop="24dp"
+                android:id="@+id/player_btn_volume_down"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="36dp"
+                android:onClick="onVolumeDownClick"
+                android:layout_height="36dp"
+                android:background="@drawable/ic_volume_down_black_24dp"
+                />
+            <Space
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <Button
+                android:id="@+id/player_btn_save"
+                android:layout_marginBottom="24dp"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="36dp"
+                android:onClick="onSavePlaylist"
+                android:layout_height="36dp"
+                android:background="@drawable/ic_save_black_24dp"
+                />
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
